@@ -1,0 +1,141 @@
+.hp-logo{
+  cursor: pointer;
+}
+
+.lang-link{
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+
+.lang-selector li {
+  padding: 6px !important;
+}
+
+.lang-link.active{
+  position: relative;
+}
+
+.lang-link.active::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000;
+  left: 0px;
+  bottom: -2px;
+}
+
+
+/* ACCARDION */
+.hp-accardion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s linear;
+}
+
+.accordion-item.active .hp-accardion-content {
+  max-height: 500px; /* подбери под свой контент */
+}
+
+.triangle {
+  display: inline-block;
+  transition: transform .5s linear;
+  margin-right: 8px;
+} 
+
+.accordion-item.active .triangle {
+  transform: rotate(90deg);
+}
+
+.hp-phone-modal, .hp-mobile-app-popup{
+  display: none;
+}
+
+.hp-phone-modal.active{
+  display: block;
+}
+.hp-mobile-app-popup.active{
+  display: block;
+}
+
+
+.modal.fadeshowmodal.fadeshow.hp-phone-modal[_ngcontent-ng-c3588443276] {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-dialog.modal-lg[_ngcontent-ng-c3588443276] {
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-content[_ngcontent-ng-c3588443276] {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-body[_ngcontent-ng-c3588443276] {
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
+
+
+body:has(.hp-phone-modal.active) {
+  overflow: hidden !important;
+}
+
+body:has(.hp-mobile-app-popup.active) {
+  overflow: hidden !important;
+}
+
+/* ERROR MESSAGE */
+.error-message{
+  display: none !important;
+}
+
+.error-message.active{
+  display: block !important;
+}
+
+
+.goog-te-banner-frame,
+.goog-te-gadget,
+body > .skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+
+.footer-copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hp-accardion-item{
+  display: flex !important;
+  align-items: center;
+}
+
+
+.triangle {
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* Активное состояние (повернуть на 180 градусов) */
+.accordion-item.active .triangle {
+  transform: rotate(180deg) !important;
+}
+
+.container-champ{
+  color: red;
+}

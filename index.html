@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<html lang="auto" data-critters-container="" class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+
+    <title>Electronic payment service for fines | Amendes.gouv.fr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      data-savepage-href="favicon.ico"
+      href="./hp-assets/fav.ico"
+    />
+
+    <link rel="stylesheet" href="./hp-styles/hp-origin-style.css">
+    <link rel="stylesheet" href="./hp-styles/hp-custom-style.css">
+
+    <meta name="savepage-version" content="33.9" />
+    <meta name="savepage-comments" content="" />
+  </head>
+  <body style="overflow: auto">
+
+
+    <cnt-tai-app ng-version="18.2.3"
+      ><div id="skip-link">
+        <ul>
+          <li><a href="javascript:void(0);">Go to content</a></li>
+          <li><a href="javascript:void(0);">Go to footer</a></li>
+        </ul>
+      </div>
+      <tai-header _nghost-ng-c1959166378=""
+        ><header _ngcontent-ng-c1959166378="" class="wrapper">
+          <div _ngcontent-ng-c1959166378="" class="logo-wrapper">
+            <div
+              _ngcontent-ng-c1959166378=""
+              aria-label="Return to homepage"
+              href=""
+              class="hp-logo"
+              ><img
+                src="./hp-assets/logo.svg"
+                width="500"
+                class="logo-header"
+                alt="French Republic Freedom Equality Fraternity - Ministry of Action and Public Accounts"
+            /></div>
+          </div>
+          <ul _ngcontent-ng-c1959166378="" class="lang-selector no-print">
+            <li _ngcontent-ng-c1959166378="">
+              <div
+                _ngcontent-ng-c1959166378=""
+                aria-label="Je souhaite cette page en français"
+                class="lang-link"
+                ><span
+                  >FR</span
+                ></div
+              >
+            </li>
+            <li _ngcontent-ng-c1959166378="">
+              <div
+                _ngcontent-ng-c1959166378=""
+                lang="en"
+                aria-label="I wish to consult this web page in English"
+                class="lang-link"
+                ><span _ngcontent-ng-c1959166378="" aria-hidden="true"
+                  >EN</span
+                ></div
+              >
+            </li>
+            <li _ngcontent-ng-c1959166378="">
+              <div
+                _ngcontent-ng-c1959166378=""
+                lang="de"
+                aria-label="Ich möchte diese Webseite auf Deutsch konsultieren"
+                class="lang-link"
+                ><span _ngcontent-ng-c1959166378="" aria-hidden="true"
+                  >DE</span
+                ></div
+              >
+            </li>
+            <li _ngcontent-ng-c1959166378="">
+              <div
+                _ngcontent-ng-c1959166378=""
+                lang="nl"
+                class="lang-link"
+                aria-label="Ik wil deze webpagina in het Nederlands raadplegen"
+                ><span _ngcontent-ng-c1959166378="" aria-hidden="true"
+                  >NL</span
+                ></div
+              >
+            </li>
+            <li _ngcontent-ng-c1959166378="">
+              <div
+                _ngcontent-ng-c1959166378=""
+                lang="it"
+                class="lang-link"
+                aria-label="Desidero consultare questo sito in italiano"
+                ><span _ngcontent-ng-c1959166378="" aria-hidden="true"
+                  >IT</span
+                ></div
+              >
+            </li>
+            <li _ngcontent-ng-c1959166378="">
+              <div
+                _ngcontent-ng-c1959166378=""
+                aria-label="Deseo consultar este página en español"
+                class="lang-link"
+                ><span _ngcontent-ng-c1959166378="" aria-hidden="true"
+                  >ES</span
+                ></div
+              >
+            </li>
+            <!---->
+          </ul>
+        </header></tai-header
+      >
+      <div id="main">
+        <router-outlet></router-outlet
+        ><tai-accueil _nghost-ng-c2501949285=""
+          ><div _ngcontent-ng-c2501949285="" class="intro-banner">
+            <div _ngcontent-ng-c2501949285="" class="wrapper">
+              <h1 _ngcontent-ng-c2501949285="" id="title-main" data-i18n="online_payment">
+                Online payment of fines service
+              </h1>
+              <p _ngcontent-ng-c2501949285="" data-i18n="you_can_pay">
+                You can pay by credit card (pay or deposit) any fines where the
+                e-payment number is present on the payment form, as well as the
+                increased post-parking fees.
+              </p>
+            </div>
+          </div>
+          <main _ngcontent-ng-c2501949285="" aria-labelledby="title-main">
+            <section
+              _ngcontent-ng-c2501949285=""
+              id="corpsAccueil"
+              class="wrapper with-aside"
+            >
+              <h3 _ngcontent-ng-c2501949285="" class="skip" data-i18n="e_payment_number">
+                E-payment number entry field
+              </h3>
+              <form
+                _ngcontent-ng-c2501949285=""
+                novalidate=""
+                id="saisie"
+                class="ng-touched ng-submitted ng-dirty ng-invalid"
+              >
+                <h2 _ngcontent-ng-c2501949285="" data-i18n="enter_the_e_payment_num">Enter the e-payment number</h2>
+                <fieldset _ngcontent-ng-c2501949285="">
+                  <legend _ngcontent-ng-c2501949285="" class="skip" data-i18n="enter_the_e_payment_numb_legend">
+                    Enter the e-payment number
+                  </legend>
+                  <!-- <button
+                    _ngcontent-ng-c2501949285=""
+                    type="button"
+                    class="btn-qrcode"
+                    data-i18n="scan_the_qr"
+                  >
+                    Scan the QR code
+                    <img
+                      _ngcontent-ng-c2501949285=""
+                      alt=""
+                      src="./hp-assets/qrcode.png"
+                    />
+                  </button> -->
+                  <div
+                    _ngcontent-ng-c2501949285=""
+                    class="flex jc-sa mt-20 container-form"
+                  >
+                    <div _ngcontent-ng-c2501949285="" class="container-champ">
+                      *
+                      <label
+                        _ngcontent-ng-c2501949285=""
+                        for="numeroTelepaiement"
+                        data-i18n="e_pay_no"
+                        class="e-payment-label"
+                        ><abbr
+                          _ngcontent-ng-c2501949285=""
+                          aria-hidden="true"
+                          title="(Required)"
+                          ></abbr
+                        >
+                        E-payment no. :
+                      </label>
+                      <div _ngcontent-ng-c2501949285="" class="flex fd-c">
+                        <input
+                          _ngcontent-ng-c2501949285="" to any e-payable fin
+                          aria-labelledby="infoFormatNumTelepaiement"
+                          autocomplete="off"
+                          formcontrolname="numTelepaiementCode"
+                          id="numeroTelepaiement"
+                          maxlength="17"
+                          numeroamendesformatter=""
+                          required=""
+                          type="tel"
+                          placeholder="E-payment no."
+                          data-i18n-placeholder="epayment_placeholder"
+                          aria-invalid="true"
+                          class="ng-touched ng-dirty ng-invalid hp-payment-number-input"
+                          value=""
+                        /><span
+                          _ngcontent-ng-c2501949285=""
+                          class="as-s sous-label"
+                          data-i18n="14_or_18_digits"
+                          >14 or 18 digits</span
+                        >
+                      </div>
+                    </div>
+                    <div _ngcontent-ng-c2501949285="" class="container-champ">
+                      *
+                      <label _ngcontent-ng-c2501949285="" for="cle"
+                      data-i18n="key"
+                        ><abbr
+                          _ngcontent-ng-c2501949285=""
+                          aria-hidden="true"
+                          title="(Required)"
+                          ></abbr
+                        >
+                        Key :</label
+                      >
+                      <div _ngcontent-ng-c2501949285="" class="flex fd-c">
+                        <input
+                          _ngcontent-ng-c2501949285=""
+                          aria-labelledby="infoFormatNumTelepaiement"
+                          autocomplete="off"
+                          formcontrolname="cle"
+                          id="cle"
+                          maxlength="2"
+                          required=""
+                          type="tel"
+                          data-i18n-placeholder="key_placeholder"
+                          placeholder="Key"
+                          aria-invalid="true"
+                          class="ng-touched ng-dirty ng-invalid hp-key-input"
+                          value=""
+                        /><span
+                          _ngcontent-ng-c2501949285=""
+                          id="infoFormatNumTelepaiement"
+                          class="as-s sous-label"
+                          data-i18n="digits"
+                          >2 digits</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    _ngcontent-ng-c2501949285=""
+                    role="alert"
+                    class="error-message"
+                  >
+                    <span _ngcontent-ng-c2501949285="" class="error-text-message" data-i18n="error_text">
+                      The e-payment number or the key is not valid. Please check your entry which must contain 14 or 18 digits then 2 digits for the key.
+                    </span>
+                  </p>
+                </fieldset>
+                <p _ngcontent-ng-c2501949285="" class="button-zone">
+                  <input
+                    _ngcontent-ng-c2501949285=""
+                    type="button"
+                    value="Pay your fine or make a deposit"
+                    class="pay-button"
+                    data-i18n="pay_button_text"
+                    data-i18n-value
+                  /><span _ngcontent-ng-c2501949285="" class="lock" data-i18n="secure"
+                    >This site is completely secure.</span
+                  >
+                </p>
+              </form>
+            </section>
+            <section _ngcontent-ng-c2501949285="" class="autre">
+              <h3 _ngcontent-ng-c2501949285="" data-i18n="how_to_find">
+                How to find your payment number and key? :
+              </h3>
+              <div _ngcontent-ng-c2501949285="" class="accordion-item">
+                <button
+                  _ngcontent-ng-c2501949285=""
+                  class="collapsible-section-title hp-accardion-item" 
+                  aria-expanded="false"
+                >
+                  <span
+                    _ngcontent-ng-c2501949285=""
+                    aria-hidden="true"
+                    class="triangle expanded"
+                    >▲</span
+                  >
+                  <p data-i18n="fixed_fine">Fixed fine</p>
+                </button>
+                
+                <div class="hp-accardion-content">
+                  <p class="hp-accardion-text" data-i18n="the_faq_text1">
+                    The e-payment number and the key can be found on the payment form. The e-payment number consists of 4 blocks of 4 4 4 and 2 numbers or 5 blocks of 4 4 4 4 and 2 numbers and the key is on the right and is a 2-digit number.
+                  </p>
+
+                  <img src="./hp-assets/carte-paiement-AF.png" alt="">
+                </div>
+              </div>
+
+
+              <div _ngcontent-ng-c2501949285="" class="accordion-item">
+                <button
+                  _ngcontent-ng-c2501949285=""
+                  class="collapsible-section-title hp-accardion-item"
+                  aria-expanded="false"
+                >
+                  <span
+                    _ngcontent-ng-c2501949285=""
+                    aria-hidden="true"
+                    class="triangle expanded"
+                    >▲</span
+                  >
+                  <p data-i18n="increased_fixed_fine">Increased fixed fine</p>
+                  </button
+                ><!---->
+                <div class="hp-accardion-content">
+                  <p class="hp-accardion-text" data-i18n="the_faq_text2">
+                    The e-payment number and the key can be found on the payment form. The e-payment number consists of 4 blocks of 4 4 4 and 2 numbers or 5 blocks of 4 4 4 4 and 2 numbers and the key is on the right and is a 2-digit number.
+                  </p>
+
+                  <img src="./hp-assets/carte-paiement-AFM.png" alt="">
+                </div>
+              </div>
+              <div _ngcontent-ng-c2501949285="" class="accordion-item">
+                <button
+                  _ngcontent-ng-c2501949285=""
+                  class="collapsible-section-title hp-accardion-item"
+                  aria-expanded="false"
+                >
+                  <span
+                    _ngcontent-ng-c2501949285=""
+                    aria-hidden="true"
+                    class="triangle expanded"
+                    >▲</span
+                  >
+                  <p data-i18n="tortious_fixed_fine">Tortious fixed fine</p></button
+                ><!---->
+                <div class="hp-accardion-content">
+                  <p class="hp-accardion-text" data-i18n="the_faq_text3">
+                    The e-payment number and the key can be found on the payment form. The e-payment number consists of 4 blocks of 4 4 4 and 2 numbers or 5 blocks of 4 4 4 4 and 2 numbers and the key is on the right and is a 2-digit number.
+                  </p>
+
+                  <img src="./hp-assets/carte-paiement-AFD.png" alt="">
+                </div>
+              </div>
+              <div _ngcontent-ng-c2501949285="" class="accordion-item">
+                <button
+                  _ngcontent-ng-c2501949285=""
+                  class="collapsible-section-title hp-accardion-item"
+                  aria-expanded="false"
+                >
+                  <span
+                    _ngcontent-ng-c2501949285=""
+                    aria-hidden="true"
+                    class="triangle expanded"
+                    >▲</span
+                  >
+                  <p data-i18n="increased_tortious_fixed_fine">Increased tortious fixed fine</p></button
+                ><!---->
+                <div class="hp-accardion-content">
+                  <p class="hp-accardion-text" data-i18n="the_faq_text4">
+                    The e-payment number and the key can be found on the payment form. The e-payment number consists of 4 blocks of 4 4 4 and 2 numbers or 5 blocks of 4 4 4 4 and 2 numbers and the key is on the right and is a 2-digit number.
+                  </p>
+
+                  <img src="./hp-assets/carte-paiement-AFMD.png" alt="">
+                </div>
+              </div>
+              <div _ngcontent-ng-c2501949285="" class="accordion-item">
+
+
+
+
+                <button
+                  _ngcontent-ng-c2501949285=""
+                  class="collapsible-section-title hp-accardion-item"
+                  aria-expanded="false"
+                >
+                  <span
+                    _ngcontent-ng-c2501949285=""
+                    aria-hidden="true"
+                    class="triangle expanded"
+                    >▲</span
+                  >
+                  <p data-i18n="increased_post_parking_fee">Increased Post-parking fee</p></button
+                >
+                
+                
+                
+                
+                
+                
+                <!---->
+                <div class="hp-accardion-content">
+                  <p class="hp-accardion-text" data-i18n="the_faq_text5">
+                    The e-payment number and the key can be found on the payment form. The e-payment number consists of 4 blocks of 4 4 4 and 2 numbers or 5 blocks of 4 4 4 4 and 2 numbers and the key is on the right and is a 2-digit number.
+                  </p>
+
+                  <img src="./hp-assets/carte-paiement-FPSM.png" alt="">
+                </div>
+              </div>
+              <!---->
+            </section>
+            <section _ngcontent-ng-c2501949285="" class="autre">
+              <!---->
+            </section>
+            <section _ngcontent-ng-c2501949285="" class="autre">
+              <h3 _ngcontent-ng-c2501949285="" data-i18n="oter_ways">Other ways to pay remotely :</h3>
+              <ul _ngcontent-ng-c2501949285="" class="moyens">
+                <li _ngcontent-ng-c2501949285="">
+                  <button
+                    _ngcontent-ng-c2501949285=""
+                    class="application modal-trigger hp-mobile-app-button"
+                    aria-label="Pay via the mobile application"
+                    data-i18n="via_mobile_app"
+                  >
+                    Via mobile app
+                  </button>
+                </li>
+                <li _ngcontent-ng-c2501949285="">
+                  <button
+                    _ngcontent-ng-c2501949285=""
+                    class="telephone modal-trigger hp-phone-button"
+                    aria-label="Pay by phone"
+                    data-i18n="via_phone"
+                  >
+                    Via phone
+                  </button>
+                </li>
+              </ul>
+            </section>
+          </main>
+      </div>
+      <tai-footer
+        ><footer role="contentinfo" id="footer-tai" class="no-print">
+          <div class="block-container wrapper">
+            <div class="block-item">
+              <h3 data-i18n="information">Information</h3>
+              <ul>
+                <li>
+                  <a
+                    data-savepage-href="/en/tai/aide"
+                    href="https://amendes.gouv.fr/en/tai/aide"
+                    data-i18n="website_help"
+                    >Website help</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-savepage-href="/en/tai/confidentialite"
+                    href="https://amendes.gouv.fr/en/tai/confidentialite"
+                    data-i18n="privacy"
+                    >Privacy / Personal information / Cookies and other
+                    trackers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-savepage-href="/en/tai/securite"
+                    href="https://amendes.gouv.fr/en/tai/securite"
+                    data-i18n="info_security"
+                    >Information security</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-savepage-href="/en/tai/glossaire"
+                    href="https://amendes.gouv.fr/en/tai/glossaire"
+                    data-i18n="glossary"
+                    >Glossary</a
+                  >
+                </li>
+                <!---->
+              </ul>
+            </div>
+            <div class="block-item">
+              <h3 data-i18n="quality_of_service">Quality of service</h3>
+              <ul>
+                <li>
+                  <a
+                    data-savepage-href="/en/tai/accessibilite"
+                    href="https://amendes.gouv.fr/en/tai/accessibilite"
+                    data-i18n="accessibility"
+                    >Accessibility</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-savepage-href="/en/tai/engagement"
+                    href="https://amendes.gouv.fr/en/tai/engagement"
+                    data-i18n="commitments"
+                    >The commitments of the DGFiP</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="block-item">
+              <h3 data-i18n="other_websites">Other websites</h3>
+              <ul>
+                <li>
+                  <a
+                    rel="noopener"
+                    target="_blank"
+                    class="link-external"
+                    title="antai.gouv.fr - New window"
+                    href="https://www.antai.gouv.fr/en"
+                    data-i18n="ANTAI"
+                    >ANTAI: (Agence nationale de traitement automatisé des
+                    infractions) National Agency for Automated Treatment of
+                    Offenses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://stationnement.gouv.fr/"
+                    rel="noopener"
+                    target="_blank"
+                    class="link-external"
+                    title="stationnement.gouv.fr - New window"
+                    data-i18n="post_parking_fee"
+                    >Post-parking fee</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-external-sites">
+            <ul>
+              <li>
+                <a
+                  href="https://www.service-public.fr/"
+                  rel="noopener"
+                  target="_blank"
+                  class="link-external"
+                  title="service-public.fr - New window"
+                  data-i18n="service_public"
+                  >Service-public.fr</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.legifrance.gouv.fr/"
+                  rel="noopener"
+                  target="_blank"
+                  class="link-external"
+                  title="legifrance.gouv.fr - New window"
+                  data-i18n="legifrance"
+                  >Legifrance.gouv.fr</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-copyright">
+            <p data-i18n="direction">
+              © Direction générale des Finances publiques -
+            </p>
+            <a
+                id="mention-legales"
+                class="xt"
+                href="https://amendes.gouv.fr/en/tai/mention-legales"
+                data-i18n="legal_statement"
+                >Legal statements</a
+              >
+          </div>
+        </footer>
+      </tai-footer>
+    </cnt-tai-app>
+
+    <!-- POPUP MODAL -->
+    <generic-modal _ngcontent-ng-c2501949285="" _nghost-ng-c3588443276="">
+      <div
+      _ngcontent-ng-c3588443276=""
+      aria-labelledby="modal-title"
+      tabindex="-1"
+      aria-modal="true"
+      role="dialog"
+      class="modal fadeshowmodal fadeshow hp-phone-modal"
+    >
+      <div _ngcontent-ng-c3588443276="" class="modal-dialog modal-lg">
+        <div _ngcontent-ng-c3588443276="" class="modal-content">
+          <div _ngcontent-ng-c3588443276="" class="modal-header">
+            <button
+              _ngcontent-ng-c3588443276=""
+              id="closeModaleButton"
+              title="Close"
+              class="hp-close-modal-x-button"
+            >
+              <span _ngcontent-ng-c3588443276="" aria-hidden="true">×</span>
+            </button>
+            <h4 _ngcontent-ng-c3588443276="" id="modal-title" data-i18n="via_phone_modal">Via phone</h4>
+          </div>
+          <div _ngcontent-ng-c3588443276="" class="modal-body">
+            <div _ngcontent-ng-c3588443276=""></div>
+            <accueil-info-telephone-modal
+              ><div>
+                <ol>
+                  <li data-i18n="call_modal">Call +33 806 20 30 40 (local call rates apply)</li>
+                  <li data-i18n="have_a_credit_card_modal">
+                    Have a credit card ready and the payment form on the received
+                    notice.
+                  </li>
+                  <img
+                      alt=""
+                      src="./hp-assets/telepaiement.jpg"
+                    />
+                  <li data-i18n="let_yourself_modal">
+                    Let yourself be guided by the French spoken instructions
+                  </li>
+                </ol>
+                <div class="sup">
+                  <br /><strong data-i18n="you_will_need_modal">You will need to fill in:</strong>
+                  <ol>
+                    <li data-i18n="the_e_payment_numver_and_key_modal">
+                      The e-payment number and key: you will find them on the form
+                      or the payment slip
+                    </li>
+                    <li data-i18n="your_credit_card_number_modal">Your credit card number and expiry date</li>
+                    <li data-i18n="cvv_modal">
+                      The CVV number on the credit card: the last 3 digits that
+                      appear on the back of your card near the signature.
+                    </li>
+                  </ol>
+                </div>
+                <p data-i18n="it_is_posible_modal">
+                  <br />It is possible to obtain a proof of payment if requested.
+                </p>
+              </div></accueil-info-telephone-modal
+            ><!---->
+          </div>
+          <div _ngcontent-ng-c3588443276="" class="modal-footer">
+            <button
+              _ngcontent-ng-c3588443276=""
+              id="closeModaleButton2"
+              type="button"
+              data-dismiss="modal"
+              class="btn btn-default hp-btn-default"
+              title="Close the PAYMENT BY PHONE window"
+              data-i18n="close_modal1"
+            >
+              Close
+            </button>
+          </div>
+          <!---->
+        </div>
+      </div>
+      </div>
+    </generic-modal>
+
+
+    <!-- POPUP MOBILE APP -->
+     <generic-modal _ngcontent-ng-c2501949285="" _nghost-ng-c3588443276=""
+  ><div
+    _ngcontent-ng-c3588443276=""
+    aria-labelledby="modal-title"
+    tabindex="-1"
+    aria-modal="true"
+    role="dialog"
+    class="modal fadeshowmodal fadeshow hp-mobile-app-popup"
+  >
+    <div _ngcontent-ng-c3588443276="" class="modal-dialog modal-lg">
+      <div _ngcontent-ng-c3588443276="" class="modal-content">
+        <div _ngcontent-ng-c3588443276="" class="modal-header">
+          <button
+            _ngcontent-ng-c3588443276=""
+            id="closeModaleButton"
+            title="Close"
+          >
+            <span _ngcontent-ng-c3588443276="" aria-hidden="true" class="close-popup-mobile-app-x">×</span>
+          </button>
+          <h4 _ngcontent-ng-c3588443276="" id="modal-title" data-i18n="via_mobile_app_modal2">Via mobile app</h4>
+        </div>
+        <div _ngcontent-ng-c3588443276="" class="modal-body">
+          <div _ngcontent-ng-c3588443276=""></div>
+          <accueil-info-app-mobile-modal
+            ><div>
+              <ol>
+                <li data-i18n="download_modal2">
+                  Download the « amendes.gouv » application on Google Play or
+                  the App Store
+                </li>
+                <li data-i18n="have_a_credit_modal2">Have a credit card ready and the payment form on the received
+                  notice.
+                </li>
+                <img
+                    alt=""
+                    src="./hp-assets/telepaiement.jpg"
+                  />
+                <li data-i18n="scan_modal2">Scan the code printed on your notice.</li>
+              </ol>
+              <div class="sup">
+                <strong data-i18n="you_will_modal2">You will need to fill in:</strong>
+                <ol>
+                  <li data-i18n="your_credit_card_modal2">Your credit card number and expiry date</li>
+                  <li data-i18n="cvv_modal2">
+                    The CVV number on the credit card: the last 3 digits that
+                    appear on the back of your card near the signature.
+                  </li>
+                </ol>
+              </div>
+              <p data-i18n="trafic_modal2">
+                If your traffic offence notice or your fine notice does not
+                include a QR code at the bottom left of the payment slip,
+                payment is also possible by entering the e-payment number and
+                its key: you will find them on the form or the payment slip.
+              </p>
+            </div></accueil-info-app-mobile-modal
+          ><!---->
+        </div>
+        <div _ngcontent-ng-c3588443276="" class="modal-footer">
+          <button
+            _ngcontent-ng-c3588443276=""
+            id="closeModaleButton2"
+            type="button"
+            data-dismiss="modal"
+            class="btn btn-default hp-Close-Button-Default-Mobile-App"
+            title="Close the PAYMENT BY MOBILE APPLICATION window"
+            data-i18n="close_modal2"
+          >
+            Close
+          </button>
+        </div>
+        <!---->
+      </div>
+    </div>
+  </div></generic-modal
+>
+
+
+    
+    <script src="./hp-scripts/hp-custom-script.js"></script>
+  </body>
+</html>
