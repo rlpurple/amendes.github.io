@@ -618,9 +618,9 @@ document.querySelectorAll(".lang-link").forEach(langDiv => {
   });
 });
 
-// При загрузке страницы восстанавливаем язык из localStorage или по умолчанию en
+// При загрузке страницы восстанавливаем язык из localStorage или по умолчанию fr
 window.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("selectedLang") || "en";
+  const savedLang = localStorage.getItem("selectedLang") || "fr";
   const langDiv = Array.from(document.querySelectorAll(".lang-link")).find(el => {
     return (el.getAttribute("lang") === savedLang) || (el.textContent.trim().toLowerCase() === savedLang);
   });
