@@ -3087,17 +3087,18 @@
           transparent
         );
       }
-      .list-group[_ngcontent-ng-c3588443276] {
-        border-radius: 4px;
-        box-shadow: 0 1px 2px #00000013;
-      }
 
-.container-form[_ngcontent-ng-c2501949285] .container-champ[_ngcontent-ng-c2501949285] {
+      .container-form[_ngcontent-ng-c2501949285] .container-champ[_ngcontent-ng-c2501949285] {
     display: block !important;
     justify-content: center;
     flex-direction: column;
 }
 
+
+      .list-group[_ngcontent-ng-c3588443276] {
+        border-radius: 4px;
+        box-shadow: 0 1px 2px #00000013;
+      }
       .list-group-item.active[_ngcontent-ng-c3588443276],
       .list-group-item.active[_ngcontent-ng-c3588443276]:hover,
       .list-group-item.active[_ngcontent-ng-c3588443276]:focus {
