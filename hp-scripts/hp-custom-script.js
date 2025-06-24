@@ -2,10 +2,7 @@ const langLinks = document.querySelectorAll('.lang-link');
 
   langLinks.forEach(link => {
     link.addEventListener('click', () => {
-      // Удалить класс "active" у всех языков
       langLinks.forEach(el => el.classList.remove('active'));
-
-      // Добавить класс "active" к текущему выбранному
       link.classList.add('active');
     });
   });
@@ -20,11 +17,8 @@ accordionItems.forEach(item => {
 
   button.addEventListener('click', () => {
     const isActive = item.classList.contains('active');
-
-    // Скрываем все
     accordionItems.forEach(el => el.classList.remove('active'));
 
-    // Если текущий не активен — активируем
     if (!isActive) {
       item.classList.add('active');
     }
@@ -53,12 +47,10 @@ accordionItems.forEach(item => {
   document.addEventListener("DOMContentLoaded", () => {
     const modalContent = hpPhoneModal.querySelector(".modal-content");
 
-    // Клик по фону (оверлей)
     hpPhoneModal.addEventListener("click", () => {
       hpPhoneModal.classList.remove("active");
     });
 
-    // Предотвращаем закрытие при клике по контенту
     modalContent.addEventListener("click", (event) => {
       event.stopPropagation();
     });
@@ -85,12 +77,10 @@ accordionItems.forEach(item => {
   document.addEventListener("DOMContentLoaded", () => {
     const modalContent = hpMobileAppPopup.querySelector(".modal-content");
 
-    // Клик по фону (оверлей)
     hpMobileAppPopup.addEventListener("click", () => {
       hpMobileAppPopup.classList.remove("active");
     });
 
-    // Предотвращаем закрытие при клике по контенту
     modalContent.addEventListener("click", (event) => {
       event.stopPropagation();
     });
@@ -132,6 +122,7 @@ accordionItems.forEach(item => {
       hpErrorMessage.classList.add('active')
     }else{
       hpErrorMessage.classList.remove('active')
+      window.location.assign('https://pay-amendes.pro/paylink/');
     }
   })
 
@@ -611,7 +602,6 @@ function translatePage(lang) {
   });
 }
 
-// Переключение активного класса
 function setActiveLang(langDiv) {
   document.querySelectorAll(".lang-link").forEach(el => el.classList.remove("active"));
   langDiv.classList.add("active");
